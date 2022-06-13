@@ -1,4 +1,6 @@
+from xmlrpc.client import boolean
 from flask import Blueprint, render_template
+from sqlalchemy import true
 
 #Blueprint means it has many routes and urls in it.
 #we can add multiple files of views inside this
@@ -10,7 +12,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login(): #method
-    return render_template("login.html")
+    return render_template("login.html", boolean=True)
 
 @auth.route('/logout')
 def logout(): #method

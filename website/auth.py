@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 #Blueprint means it has many routes and urls in it.
 #we can add multiple files of views inside this
@@ -10,7 +10,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login(): #method
-    return "<p>Login</p>"
+    return render_template("login.html")
 
 @auth.route('/logout')
 def logout(): #method
@@ -18,6 +18,6 @@ def logout(): #method
 
 @auth.route('/sign-up')
 def sign_up():
-    return "<p> Sign up </p>"
+    return render_template("sign_up.html")
     
 

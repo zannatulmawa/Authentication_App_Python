@@ -10,7 +10,7 @@ from sqlalchemy import true
 auth = Blueprint('auth', __name__) 
 
 
-@auth.route('/login')
+@auth.route('/login', methods=[ 'POST'])
 def login(): #method
     return render_template("login.html", boolean=True)
 
@@ -18,7 +18,7 @@ def login(): #method
 def logout(): #method
     return "<p>Logout</p>"
 
-@auth.route('/sign-up')
+@auth.route('/sign-up' , methods=[ 'POST'])
 def sign_up():
     return render_template("sign_up.html")
     

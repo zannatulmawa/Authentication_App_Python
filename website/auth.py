@@ -33,7 +33,7 @@ def sign_up():
         elif password1 != password2:
             flash('passwords should be matched.', category='error')
         elif len(password1) < 7:
-            flash('Email must be greater than 7 characters.', category='error')
+            flash('Password must be greater than 7 characters.', category='error')
         else:
             flash('Account Created', category='success')
         
